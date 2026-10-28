@@ -1,0 +1,2 @@
+﻿slide_id,patient_id,cancer,tss,svs_ok,n_tiles,fold,excluded
+TCGA-44-7661-01Z-00-DX1,TCGA-44-7661,LUAD,44,True,-1,3,조직 타일 0개
