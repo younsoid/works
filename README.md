@@ -1,6 +1,6 @@
 # works
 
-"H&E에서 직접 재는 면역미세환경 feature 하나"를 정의하고, 분자 데이터는 정답이 아니라 그 feature의 생물학적 해석과 검증에 쓴다. 그리고 공개 병리 파운데이션 모델(UNI, CONCH, Virchow, EXAONEPath 등) 위에 MIL 모델을 학습해 attention heatmap을 얻고, 그 heatmap을 생물정보학적으로 해석한다.
+"H&E에서 직접 재는 면역미세환경 feature 하나"를 정의하고, 분자 데이터는 그 feature의 생물학적 해석과 검증에 쓴다. 그리고 공개 병리 파운데이션 모델(UNI, CONCH, Virchow, EXAONEPath 등) 위에 MIL 모델을 학습해 attention heatmap을 얻고, 그 heatmap을 생물정보학적으로 해석한다.
 
 | 층위 | 주장의 형태 | 쓰는 데이터 | 조직 불일치의 영향 |
 |---|---|---|---|
