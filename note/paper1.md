@@ -1,5 +1,7 @@
 # A Pathway-Structured Privileged Distillation Framework for Deployable Computational Pathology
 
+<img width="759" height="188" alt="image" src="https://github.com/user-attachments/assets/352f9df1-e424-44c7-8de6-023fcebb9f49" />
+
 wsi는 암 진단시에 항상 생성되는 데이터. 암세포의 생김새, 암조직의 구조, 면역 세포와 섬유 조직이 주변에 어떤 조성인지를 볼수있다.
 
 wsi만 봐서는 유전자 발현량은 알수없다. 유전자 발현 점수로는 재발위험정보 등을 알수있다. wsi로는 알기 어렵다.
@@ -30,11 +32,15 @@ wsi에서 '숨겨져있지만 발굴은 된다'는 것의 의미는 무엇인가
 
 즉 차원 축소(20000 -> 50)가 이뤄지고 형태와 연결성이 높아지고 해석 가능성도 높아진다. 
 
+<img width="768" height="301" alt="image" src="https://github.com/user-attachments/assets/9ffcde3a-4178-4553-b9f5-85d0be4b4bc0" />
+
 mope 모델은 2개 branch로 구성되는데 wsi branch, rna branch가 있다. rna branch는 학습할때만 존재한다.
 
 rna branch에서는 샘플의 hallmark pathway 50개를 input으로 받고, 각 pathway k에 속한 gene expression을 합친 벡터를 선형 투영, layer norm 해서 pathway token 벡터를 만든다. 즉 샘플당 pathway token 50개가 생긴다.
 
 wsi branch는 각 slide의 patch feature를 뽑고, 50개의 pathway indexed experts를 둔다. 각 expert 안에 morphology slot이 L개 있고 slot은 patch feature와 내적, softmax를 거쳐서 patch들의 attention 분포를 만들어, 각 패치를 weighted 평균한다. L개 두는 이유는 한 pathway가 여러 형태로 나타날수있기 때문이다. 예를들어 "염증반응" pathway면 림프구가 뭉친곳, 대식세포가 흩어진곳처럼 서로 다른 모양의 patch가 모두 근거가 될수있다. L개 slot의 결과를 합치면 경로 k에 대한 최종 expert token이 나온다. (즉 경로마다 attention head를 여러개 둔 셈이다)
+
+<img width="382" height="229" alt="image" src="https://github.com/user-attachments/assets/d6e08b78-ff76-4f04-893c-c95349d00061" />
 
 그러면 이제 pathway 마다 pathway token과 wsi expert token 이 있는데 어떻게 학습할것인가? 직접 배우게 하려면 cosine distance를 줄이거나 mse를 줄이면 된다. 이 논문은 rna token에 담긴 정보를 wsi에서 모두 확인할수없을수 있기 때문에 이를 반영해서 memory usage distillation 을 사용했다. rna와 wsi가 모두 쓰는 공용 벡터 집합인 memory bank C를 하나 두고, 안에는 M개의 잠재 기저 벡터가 있다. 이를 wsi feature을 k means로 clustering 한 centroid로 초기화한후 rna token을 M개 기저벡터 각각과 내적, softmax한다. 그러면 rna token이 어떤 기저벡터와 얼마나 닮았는지를 나타내는 확률분포가 나온다. 똑같이 wsi token으로도 확률분포를 만든다. 그리고 두 분포 사이 KL 발산을 줄여서 증류 손실을 낮춘다. 이렇게 하면 두 token이 같아지도록 학습하는게 아니라 같은 기저를 비슷한 비율로 사용하도록 학습한다. (feature identity를 강요하는 대신 공유 기억 기저를 비슷한 방식으로 사용하도록 유도한다)(RNA 토큰 쪽에는 stop-gradient를 걸어서, 정답이 학생 쪽 손실에 끌려 움직이지 않게 고정한다. 메모리 기저들이 한쪽으로 몰리거나 서로 겹치지 않도록, vector quantization 방식의 commitment 항과 기저 간 직교성 항으로 메모리를 정규화한다.)
 
