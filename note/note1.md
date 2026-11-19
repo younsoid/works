@@ -14,13 +14,15 @@ luad subtype은 452명, lusc subtype은 453명을 사용해서 총 905명이 예
 
 생존 자료는 생존 유무랑 시간 데이터고 병기는 진단 시점의 암이 몇기인지 1~4기로 나눈 값이다. 
 
++) wsi 처리 과정에서 luad의 몇장이 빠졌다. wsi 장수는 laud 442명, lusc 453명으로 총 895명의 wsi가 학습에 사용됐다.
+
 ### 1-2. MFP 29 signature 재현
 
-연구의 목적은 Bagaev 연구의 29 msi score를 예측하는 것이다. 
+연구의 목적은 Bagaev 연구의 29 tme score를 예측하는 것이다. 
 
-905명의 rna 데이터로 Bagaev 연구의 29 msi score를 계산해서 905명x29 msi score table을 만들었다. 
+905명의 rna 데이터로 Bagaev 연구의 29 mfp score를 계산해서 905명x29 mfp score table을 만들었다. 
 
-그리고 Bagaev 연구에서 사용한 29 msi score와 수치를 비교해봤는데, Bagaev와 공통인 893명만 가지고 계산했고 Spearman ρ가 0.991이 나와서 거의 일치함을 확인했다. 그래서 893명만이 아니라 905명 data를 사용할수있게 됐고 정당성도 검증됐다.
+그리고 Bagaev 연구에서 사용한 29 mfp score와 수치를 비교해봤는데, Bagaev와 공통인 893명만 가지고 계산했고 Spearman ρ가 0.991이 나와서 거의 일치함을 확인했다. 그래서 893명만이 아니라 905명 data를 사용할수있게 됐고 정당성도 검증됐다.
 
 ### 1-3. MFP subtype 재현
 
@@ -32,9 +34,9 @@ Bagaev 연구는 29 score를 기반으로 데이터를 4 subtype으로 나눴다
 
 histotme 연구에서는 4 subtype을 따라 attention head를 묶어서 학습했었고 성능이 아주 조금 올랐었다. 
 
-나눈 방법은 23개 암종 7031명을 가지고 29 signature을 feature로 한 knn을 학습시켜 분류했고 폐암에서의 분류 결과는 893명에 대해 각각 -명/-명/-명/-명이었다. 
+나눈 방법은 24개 암종 7031+a명을 가지고 29 signature을 feature로 한 knn을 학습시켜 분류했고 폐암에서의 분류 결과는 893명에 대해 각각 212/150/207/324명이었다. 
 
-그래서 우리도 이를 재현하기 위해 23개 암종 7031명을 가지고 29 signature을 feature로 한 knn을 학습시켰다. 이때 폐암은 빼고 학습시켜서 22개 암종 _명을 가지고 4분류 knn 을 학습하고 이를 우리 905명의 4 subtype 분류에 사용하였다. 
+그래서 우리도 이를 재현하기 위해 24개 암종 7031+a명을 가지고 29 signature을 feature로 한 knn을 학습시켰다. 이때 폐암은 빼고 학습시켜서 23개 암종 7031명을 가지고 4분류 knn 을 학습하고 이를 우리 905명의 4 subtype 분류에 사용하였다. 
 
 분류 결과 laud 452명에서 각각 128/63/93/168로 분류되었고 lusc 453명에서 104/63/89/197로 분류되었다. 
 
@@ -46,4 +48,5 @@ histotme 연구에서는 4 subtype을 따라 attention head를 묶어서 학습�
 
 Bagaev의 29 msi score만 쓰면 msi 자체의 특성보다는 그 방법론의 계산방식과 gene set에 치우칠수 있어서 MFP score 외에 3개 검증용 점수를 구했다. 
 
-Yoshihara 연구의 ESTIMATE, Becht 연구의 MCP-counter, Thorsson 표의 22 immune cell rate에 wbc rate를 곱한 CIBERSORT 절댓값을 계산해서 추후 검증용으로 사용한다. 
+Yoshihara 연구의 ESTIMATE, Becht 연구의 MCP-counter, Thorsson 표의 22 immune cell rate에 wbc rate를 곱한 CIBERSORT 절댓값을 계산했다.
+
