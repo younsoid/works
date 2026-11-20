@@ -29,3 +29,16 @@
 6-1. grouping과 비교 설계 [#](https://github.com/younsoid/works/blob/main/note/note3.md)
 
 6-2. g6 grouping 확인 [#](https://github.com/younsoid/works/blob/main/note/note3.md)
+
+#
+
+---
+
+#
+
+# 논문 리뷰
+
+1. A Pathway-Structured Privileged Distillation Framework for Deployable Computational Pathology [#](https://github.com/younsoid/works/blob/main/note/paper1.md)
+
+
+#
