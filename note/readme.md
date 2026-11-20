@@ -30,9 +30,6 @@
 
 6-2. g6 grouping 확인 [#](https://github.com/younsoid/works/blob/main/note/note3.md)
 
-#
-
----
 
 #
 
