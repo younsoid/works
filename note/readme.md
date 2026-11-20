@@ -34,6 +34,20 @@
 
 6-4. k=4 g6 grouping [#](https://github.com/younsoid/works/blob/main/note/note4.md)
 
+6-5. k=4 g6 grouping (2) [#](https://github.com/younsoid/works/blob/main/note/note5.md)
+
+6-6. 각 grouping의 결속 측정 [#](https://github.com/younsoid/works/blob/main/note/note5.md)
+
+6-7. g2 악성세포, 항종양 group 조성 확인 [#](https://github.com/younsoid/works/blob/main/note/note5.md)
+ 
+6-8. g9 grouping
+
+6-9. 보조 오믹스의 설명력
+
+6-10. 29 signature의 보조 오믹스 채택
+
+6-11 grouping 별 보조 오믹스 채택
+
 #
 
 # 논문 리뷰
