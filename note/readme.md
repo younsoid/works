@@ -48,6 +48,15 @@
 
 6-11 grouping 별 보조 오믹스 채택
 
+### 9. 성능 평가
+
+9-1. 기본 성능 [#](https://github.com/younsoid/works/blob/main/note/note6.md)
+
+9-2 grouping 이득 확인 (luad) [#](https://github.com/younsoid/works/blob/main/note/note6.md)
+
+9-3. grouping 이득 확인 (lusc) [#](https://github.com/younsoid/works/blob/main/note/note6.md)
+
+
 #
 
 # 논문 리뷰
