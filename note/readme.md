@@ -32,7 +32,7 @@
 
 6-3. k=2 g6는 사실상 g1이다. [#](https://github.com/younsoid/works/blob/main/note/note4.md)
 
-6-4. k=4 g6 grouping 개요 [#](https://github.com/younsoid/works/blob/main/note/note4.md)
+6-4. k=4 g6 grouping [#](https://github.com/younsoid/works/blob/main/note/note4.md)
 
 #
 
