@@ -44,9 +44,9 @@ histotme 연구에서는 4 subtype을 따라 attention head를 묶어서 학습�
 
 여기서 알수있는건 4 subtype이 뚜렷한 범주라기보다는 면역->섬유화->면역결핍 의 연속 축이있고 그걸 구간화한것이라는 걸 알수있다. 즉 아형 경계 자체가 흐리다는 정답의 성질이 있다.  
 
-### 1-4. msi score 보조 데이터
+### 1-4. MFP score 보조 데이터
 
-Bagaev의 29 msi score만 쓰면 msi 자체의 특성보다는 그 방법론의 계산방식과 gene set에 치우칠수 있어서 MFP score 외에 3개 검증용 점수를 구했다. 
+Bagaev의 29 mfp score만 쓰면 msi 자체의 특성보다는 그 방법론의 계산방식과 gene set에 치우칠수 있어서 MFP score 외에 3개 검증용 점수를 구했다. 
 
 Yoshihara 연구의 ESTIMATE, Becht 연구의 MCP-counter, Thorsson 표의 22 immune cell rate에 wbc rate를 곱한 CIBERSORT 절댓값을 계산했다.
 
