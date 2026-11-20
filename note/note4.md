@@ -4,7 +4,7 @@ k=2 g6의 group 내 ρ는 luad 0.42, lusc 0.47로, g1의 group 내 ρ(0.39, 0.42
 
 이 grouping으로 알수있는것은 rna coexpression이 큰 면역축 하나가 지배한다는것밖에 없다. data based grouping으로 새로운 축을 확인하려면 28 signature 안에서 유의미한 cut이 필요하다. 따라서 silluette score가 두번째로 높은 k=4 버전의 g6을 확인해본다. 
 
-### 6-4. k=4 g6 grouping 개요
+### 6-4. k=4 g6 grouping
 
 k=4로 grouping 한 결과 luad, lusc가 유사하게 나왔다. [18,9,1,1] [17,9,2,1]
 
