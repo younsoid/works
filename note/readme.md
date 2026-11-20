@@ -8,7 +8,7 @@
 
 1-3. MFP subtype 재현 [#](https://github.com/younsoid/works/blob/main/note/note1.md)
 
-1-4. msi score 보조 데이터 [#](https://github.com/younsoid/works/blob/main/note/note1.md)
+1-4. MFP score 보조 데이터 [#](https://github.com/younsoid/works/blob/main/note/note1.md)
 
 1-5. 오믹스 현황 [#](https://github.com/younsoid/works/blob/main/note/note2.md)
 
