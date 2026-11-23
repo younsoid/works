@@ -6,7 +6,7 @@ g0은 signature 마다 head를 할당하는 방식이고, g6, g9는 rna coexpres
 
 g0 방식으로 일단 모델을 한번 돌려서 모델의 attention이 비슷한 signature끼리 grouping하는게 g7이므로 g0 attention으로 attention similarity matrix를 만들고 g6처럼 hierachical clustering해서 g7을 만들었다. 
 
-g0 attention 결과 similarity matrix 내 값은 3 seed 동안 평균 laud [, , ] lusc [, , ] 로 나왔다. 
+g0 attention 결과 similarity matrix 내 값은 3 seed 동안 평균 laud [0.322, 0.479, 0.550, 0.586, 0.596] lusc [0.418, 0.436, 0.363, 0.393, 0.376] 로 나왔다. (5 fold)
 
 그리고 silluette score로 최적 k는 10 fold 모두 k=2가 나왔다. luad 5 fold는 [28,1] 4번, [25,4] 4번이었다. lusc 5 fold는 [28,1]이 2번, [20,9], [18,11], [24,5]가 나왔다. 
 
