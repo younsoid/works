@@ -14,7 +14,7 @@ luad subtype은 452명, lusc subtype은 453명을 사용해서 총 905명이 예
 
 생존 자료는 생존 유무랑 시간 데이터고 병기는 진단 시점의 암이 몇기인지 1~4기로 나눈 값이다. 
 
-+) wsi 처리 과정에서 luad의 몇장이 빠졌다. wsi 장수는 laud 442명, lusc 453명으로 총 895명의 wsi가 학습에 사용됐다.
++) wsi 처리 과정에서 luad의 몇장이 TCGA QC Fail 라벨링되어있길래 제외했다. wsi 장수는 laud 442명, lusc 453명으로 총 895명의 wsi가 학습에 사용됐다.
 
 ### 1-2. MFP 29 signature 재현
 
