@@ -4,9 +4,7 @@
 
 연구의 목적은 h&e slide로 rna msi 점수를 예측하는 것이다. 
 
-그래서 데이터로는 dx slide, rna가 모두 존재하는 대상자를 사용했다. 
-
-luad subtype은 452명, lusc subtype은 453명을 사용해서 총 905명이 예측 대상으로 사용되었다.
+그래서 데이터로는 dx slide, rna가 모두 존재하는 대상자를 사용했다. luad subtype은 452명, lusc subtype은 453명을 사용해서 총 905명이 예측 대상으로 사용되었다.
 
 905명이 가진 데이터 종류는 변이(maf), miRNA, 복제수 aneuploidy score, methylation, rppa, thorsson table, survival data, age, 병기. 
 
