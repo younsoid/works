@@ -56,7 +56,7 @@
 
 8-3. g7과 g6의 유사성 [#](https://github.com/younsoid/works/blob/main/note/note8.md)
 
-
+8-4. Attention similarity와 RNA coexpression [#](https://github.com/younsoid/works/blob/main/note/note10.md)
 
 ### 9. 성능 평가
 
