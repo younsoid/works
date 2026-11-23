@@ -24,7 +24,9 @@ attention similarity matrix는 attention 학습때마다 생성되므로 seed에
 
 ### 8-3. g7과 g6의 유사성
 
-G6는 RNA 공발현으로, G7은 G0 attention의 형태 유사도로 시그니처를 묶었다. 같은 fold의 학습 환자(test 제외)에서 시그니처 쌍 406개마다 RNA 상관과 형태 유사도를 구해 5개 fold 평균을 냈다. 두 값의 Spearman 상관은 LUAD 0.58, LUSC 0.70으로, RNA로 같이 움직이는 쌍일수록 attention도 비슷한 경향이 있었다. 이 경향에서 벗어난 쌍을 찾으려고, 406쌍에 형태 유사도 ~ RNA 상관 직선을 맞추고 잔차를 표준화한 z가 ±2를 넘는 쌍을 골랐다. LUAD에서 31쌍(경향보다 attention이 덜 비슷한 쪽 23, 더 비슷한 쪽 8), LUSC에서 26쌍(14, 12)이었다.
+G6는 RNA 공발현으로, G7은 G0 attention의 형태 유사도로 시그니처를 묶었다. 같은 fold의 학습 환자(test 제외)에서 시그니처 쌍 406개마다 RNA 상관과 형태 유사도를 구해 5개 fold 평균을 냈다. 두 값의 Spearman 상관은 LUAD 0.58, LUSC 0.70으로, RNA로 같이 움직이는 쌍일수록 attention도 비슷한 경향이 있었다. 
+
+이 경향에서 벗어난 쌍을 찾으려고, 406쌍에 형태 유사도 ~ RNA 상관 직선을 맞추고 잔차를 표준화한 z가 ±2를 넘는 쌍을 골랐다. LUAD에서 31쌍(경향보다 attention이 덜 비슷한 쪽 23, 더 비슷한 쪽 8), LUSC에서 26쌍(14, 12)이었다.
 
 <img width="5373" height="2584" alt="fig10_rna_vs_attention_pairs_LUAD" src="https://github.com/user-attachments/assets/7f4afc99-bd0d-47ab-a58e-1f17d0b371fb" />
 <img width="5373" height="2584" alt="fig10_rna_vs_attention_pairs_LUSC" src="https://github.com/user-attachments/assets/35523b75-ba17-460d-a84c-64b836f44ebd" />
