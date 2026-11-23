@@ -48,6 +48,16 @@
 
 6-11 grouping 별 보조 오믹스 채택
 
+### 8. Attention과 g7 grouping
+
+8-1. attention 확인 [#](https://github.com/younsoid/works/blob/main/note/note8.md)
+
+8-2. attention similarity matrix의 일관성 [#](https://github.com/younsoid/works/blob/main/note/note8.md)
+
+8-3. g7과 g6의 유사성 [#](https://github.com/younsoid/works/blob/main/note/note8.md)
+
+
+
 ### 9. 성능 평가
 
 9-1. 기본 성능 [#](https://github.com/younsoid/works/blob/main/note/note6.md)
