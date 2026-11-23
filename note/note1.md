@@ -18,7 +18,7 @@ luad subtype은 452명, lusc subtype은 453명을 사용해서 총 905명이 예
 
 ### 1-2. MFP 29 signature 재현
 
-연구의 목적은 Bagaev 연구의 29 tme score를 예측하는 것이다. 
+연구의 목적은 Bagaev 연구의 29 mfp score를 예측하는 것이다. 
 
 905명의 rna 데이터로 Bagaev 연구의 29 mfp score를 계산해서 905명x29 mfp score table을 만들었다. 
 
