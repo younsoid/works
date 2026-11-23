@@ -24,15 +24,24 @@ attention similarity matrix는 attention 학습때마다 생성되므로 seed에
 
 ### 8-3. g7과 g6의 유사성
 
-G6는 RNA 공발현으로, G7은 G0 attention의 형태 유사도로 시그니처를 묶었다. 같은 fold의 학습 환자(test 제외)에서 시그니처 쌍 406개마다 RNA 상관과 형태 유사도를 구해 5개 fold 평균을 냈다. 두 값의 Spearman 상관은 LUAD 0.58, LUSC 0.70으로, RNA로 같이 움직이는 쌍일수록 attention도 비슷한 경향이 있었다. 
+g6은 rna coexpression으로 grouping 했고, g7은 attention similarity로 grouping을 했다. 
 
-이 경향에서 벗어난 쌍을 찾으려고, 406쌍에 형태 유사도 ~ RNA 상관 직선을 맞추고 잔차를 표준화한 z가 ±2를 넘는 쌍을 골랐다. LUAD에서 31쌍(경향보다 attention이 덜 비슷한 쪽 23, 더 비슷한 쪽 8), LUSC에서 26쌍(14, 12)이었다.
+여기서 g6에서는 grouping 되었는데 g7에서는 grouping되지 않은 경우는 coexpression 되었지만 모델의 attention이 다른 경우이다. 
 
-<img width="5373" height="2584" alt="fig10_rna_vs_attention_pairs_LUAD" src="https://github.com/user-attachments/assets/7f4afc99-bd0d-47ab-a58e-1f17d0b371fb" />
-<img width="5373" height="2584" alt="fig10_rna_vs_attention_pairs_LUSC" src="https://github.com/user-attachments/assets/35523b75-ba17-460d-a84c-64b836f44ebd" />
+이를 확인하기 위해서 먼저 5개 fold 마다 g6, g7 사이 ARI를 계산했다. ARI는 grouping이 완전히 같으면 1, 아무 관계가 없으면 0이다. 
 
-첫째는 RNA로 같이 움직이는 정도에 비해 attention이 덜 비슷한 경우다. 같은 RNA 축에 있어도 모델이 그 시그니처를 맞히려고 보는 부위가 다른 경우다. LUAD에서는 호중구가 가장 뚜렷했다. 덜 비슷한 쪽 23쌍 중 18쌍이 Neutrophil_signature 짝이었고, 이 시그니처가 낀 쌍 28개의 평균 잔차는 −0.28로 가장 낮았다. Granulocyte_traffic과는 RNA 상관이 0.42인데 형태 유사도는 0.10(z −3.0), MDSC_traffic과는 RNA 0.48에 형태 0.17(z −2.7)이었다. 다음은 Endothelium(평균 잔차 −0.23)이다. Endothelium은 혈관신생, CAF, 세포외기질과 함께 5개 fold 모두 G6 기질 그룹에 들어갔다. Angiogenesis와는 RNA 0.74에 형태 0.34(z −2.2), CAF와는 RNA 0.60에 형태 0.29(z −2.1)였다. B 세포도 평균 잔차가 −0.13으로 낮은 쪽이었다. 다만 T 세포와의 개별 짝(RNA 0.70, 형태 0.49)은 기준에 들 만큼 벗어나지 않아, 특정 짝보다는 시그니처 전반에 걸친 약한 경향이었다. LUSC에서는 Endothelium(−0.079)과 함께 MHCII(−0.079), Treg(−0.067), B_cells(−0.066) 같은 림프구 계열이 낮은 쪽에 있었다. 주로 호중구 계열·혈관 시그니처와의 짝이 경향보다 덜 비슷했다(MHCII–Granulocyte_traffic z −2.7, MHCII–Neutrophil z −2.6). LUSC에서 같은 G6 그룹인데 attention이 가장 다른 짝은 MHCII–T_reg_traffic이었다(RNA 0.62, 형태 0.27, z −2.1).
+그리고 g6-random을 사용해서  g7과 ARI를 측정한 random-ARI 분포를 만들어서 ARI와 비교, random의 상위 5%면 유의한 ARI로 보고 g6과 g7에서 같은 grouping이 됐는지 다른 grouping이 됐는지를 확인했다. 
 
-둘째는 RNA로는 따로 움직이는데 attention은 경향보다 더 비슷한 경우다. 두 조직형 모두 Proliferation_rate가 대부분을 차지했다. LUAD에서는 더 비슷한 쪽 8쌍이 모두 Proliferation_rate 짝이었고, 평균 잔차는 +0.21이었다. T_reg_traffic과는 RNA −0.24인데 형태 0.72(z +3.2), Th2_signature와는 RNA −0.24에 형태 0.68(z +2.9), Checkpoint_inhibition과는 RNA 0.11에 형태 0.73(z +2.4)이었다. LUSC에서도 12쌍 중 10쌍이 Proliferation_rate 짝이었다(평균 잔차 +0.11). EMT_signature와는 RNA −0.23에 형태 0.50(z +3.0), MDSC_traffic과는 RNA −0.36에 형태 0.44(z +2.8)였다. 06-4에서 증식은 나머지 28개와 RNA로 함께 움직이지 않는 유일한 시그니처였지만, attention에서는 RNA가 시사하는 만큼 따로 보지 않았다. 생물학적으로는 독자적인 신호인데, 모델은 이를 맞힐 때 고유한 부위보다 다른 시그니처들이 함께 보는 영역을 보는 것으로 보인다. LUSC에서는 이 밖에 RNA로 아주 강하게 묶이는 T·NK 세포 짝도 경향선 위에 있었다. Effector_cells–NK_cells는 RNA 0.94에 형태 0.70(z +2.4), T_cell_traffic–T_cells는 0.86에 0.66(z +2.1)이었다. RNA로 강하게 묶이는 면역 세포 짝은 attention에서도 실제로 같은 곳을 본다는 대조 사례다.
+먼저 g6에서는 grouping 되었지만 g7에서는 떨어진 pair는 406개 중 luad 26, lusc 17 pair였다.
 
-정리하면, RNA 공발현으로 묶는 것과 attention 형태로 묶는 것은 대체로 같은 방향이지만 의미가 다르다. 그 차이는 특정 시그니처에 몰려 있다. RNA에 비해 attention이 따로 노는 쪽은 LUAD의 호중구·혈관 내피·B 세포, LUSC의 혈관 내피·림프구 계열이다. RNA에 비해 attention이 공통 영역을 보는 쪽은 두 조직형 모두의 증식이다. 앞의 시그니처들은 08-1에서 G7 큰 무리 밖으로 자주 떨어져 나온 시그니처와 겹친다. 다만 z ±2 기준은 결과를 보고 정한 값이고, 직선 하나로 경향을 잡은 것이라 강조 쌍의 경계는 기준에 따라 달라질 수 있다.
+luad는 26개 중 17 pair가 B cell - {T cell 등 면역 signature} 였고 8 pair가 Endothelium - {기질 signature} 였다.
+
+lusc는 17개 중 6개가 Endothelium - {기질 signature} 였고 Treg 5개, Macrophages 5개, B_cells 3개 였다. 
+
+그리고 g6에서는 떨어져있었는데 g7에서 grouping 된 pair는 luad 161, lusc 87 pair였다. 이중 5 fold 모두에서 grouping 된 pair는 laud 125, lusc 10개였는데 luad 125 중 102가 면역-기질 group 간이었고 Proliferation rate-면역 이 17, Proliferation rate-기질 이 6이었다. 호중구는 fold별로 경향이 달랐다. 
+
+즉 g7 group은 g6 group과 크게 다르다(ARI 0.2). 그리고 g6 떨어짐 -> g7 grouped 가 많은것은 g7 group에서 하나의 group이 대부분의 n 수를 차지하고 있어서일수있다. 
+
+반대로 g6 grouped -> g7 떨어짐은 luad에서 B cell, Endothelium에 몰렸고 lusc에서 Endothelium, Treg·대식세포·B 세포에 몰렸다. 이 경우는 RNA로는 같은 group이어도 모델이 그 signature를 맞힐때 쓰는 조직 근거가 다를 수 있는 후보다. 
+
+또한 g6 모델의 attention(사실상 g7)과 g7 모델의 attention 사이 차이를 보면 rna grouping의 효과와 attention grouping의 효과를 나눠서 볼수있다.
