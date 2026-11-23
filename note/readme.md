@@ -34,7 +34,7 @@
 
 6-4. k=4 g6 grouping [#](https://github.com/younsoid/works/blob/main/note/note4.md)
 
-6-5. k=4 g6 grouping (2) [#](https://github.com/younsoid/works/blob/main/note/note5.md)
+6-5. k=4 g6 grouping (2) [#](https://github.com/younsoid/works/blob/main/note/note5.md) (3) [#](https://github.com/younsoid/works/blob/main/note/note9.md)
 
 6-6. 각 grouping의 결속 측정 [#](https://github.com/younsoid/works/blob/main/note/note5.md)
 
