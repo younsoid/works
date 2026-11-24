@@ -1,6 +1,8 @@
+# 연구 배경
+
 <img width="897" height="340" alt="image" src="https://github.com/user-attachments/assets/a233d9b8-efbc-4528-a931-f790d6250f0b" />
 
-Bagaev 논문은 Conserved pan-cancer microenvironment subtypes predict response to immunotherapy인데
+Bagaev 논문은 Conserved pan-cancer microenvironment subtypes predict response to immunotherapy이다.
 
 이 논문에서는 29 MFP signature를 정의하고, 그 signature를 기능에 따라 Anti-tumor / Pro-tumor / Angio·Fibrosis / Malignant로 나눴다. 
 
