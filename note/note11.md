@@ -37,11 +37,9 @@ WSI로 RNA를 예측하려는 연구들에서는 RNA 예측 성능을 놓고 개
 
 #4
 
-RNA 예측 성능을 높이는 방법으로 타 오믹스를 함께 학습하는것이 있다. RNA와 함께 타 오믹스를 학습해서 성능을 올린 연구도 있고 최근에는 RNA 없이 타 오믹스만으로 RNA를 예측하기도 했다. (Estimating gene expression from DNA methylation and copy number variation)
+RNA 예측 성능을 높이는 방법으로 타 오믹스를 함께 학습하는것이 있다. RNA와 함께 타 오믹스를 학습해서 성능을 올린 연구도 있고 최근에는 RNA 없이 타 오믹스만으로 RNA를 예측하기도 했다. (Estimating gene expression from DNA methylation and copy number variation) 
 
-실제로 WSI 예측 모델에서 다양한 방법으로 타 오믹스 정보를 반영하는 연구가 있다. (HistoMethyl, MKD, G-HANet, PathLUPI, Fuji) 
-
-HistoMethyl 연구에서는 사전학습 정렬로 이를 구현했고, 유전자 변이, 생존, 메틸화 β값 예측에서 성능 향상을 확인했다.
+실제로 WSI 예측 모델에서 다양한 방법으로 타 오믹스 정보를 반영하는 연구가 있다. (HistoMethyl, MKD, G-HANet, PathLUPI, Fuji) HistoMethyl 연구에서는 사전학습 정렬로 이를 구현했고, 유전자 변이, 생존, 메틸화 β값 예측에서 성능 향상을 확인했다.
 
 이처럼 학습 단계에서 다른 오믹스를 참조하고, 추론은 H&E만 쓰는 연구가 많지만 RNA 예측에 보조 정답으로 타 오믹스를 사용한 연구는 없다. 
 
