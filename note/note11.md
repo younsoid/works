@@ -11,8 +11,6 @@ Bagaev 논문은 Conserved pan-cancer microenvironment subtypes predict response
 
 해당 논문은 이 29 signature의 expression pattern을 사용해서 환자를 IE·IE/F·F·D type으로 분류했다. (TCGA 8,024명 환자간 Pearson correlation -> Louvain clustering) 그리고 4개 type은 immune inflamed, immune excluded, immune desert 라는 특성의 연속 축 위에 있다고 말한다. 
 
-###
-
 #2 
 
 <img width="500" alt="image" src="https://github.com/user-attachments/assets/ef7ff1b7-f904-4c46-b9c6-66c30fc3340c" />
@@ -25,15 +23,11 @@ HistoTME 논문은 WSI를 받아서 이 29 signature를 예측하는 연구이�
 
 그리고 Anti-tumor / Pro-tumor group의 attention 을 비교했을때 유사하다고 나왔다. 즉 기능적으로 완전히 반대인 signature라 하더라도 같은 부분에 attention을 줬을 수 있다. attention이 비슷한 group 끼리 head를 묶어야 부정적 전이가 발생하지 않기 때문에 head grouping에 대해 새로운 방법이 필요하다. 
 
-###
-
 #3 
 
 WSI로 RNA를 예측하려는 연구들에서는 RNA 예측 성능을 놓고 개선 한계를 언급하기도 한다. WSI로 예측 성능이 낮은 RNA signature 중에는 WSI 이미지에서 잘 드러나지 않는 신호가 있을 수 있다는 것이다. 
 
 실제로 HE2RNA 연구에서는 WSI에서 잘 드러나는 RNA 경로와 그렇지 않은 RNA 경로를 언급하기도 했다. (A deep learning model to predict RNA-Seq expression of tumours from whole slide images)
-
-###
 
 #4
 
@@ -43,7 +37,7 @@ RNA 예측 성능을 높이는 방법으로 타 오믹스를 함께 학습하는
 
 이처럼 학습 단계에서 다른 오믹스를 참조하고, 추론은 H&E만 쓰는 연구가 많지만 RNA 예측에 보조 정답으로 타 오믹스를 사용한 연구는 없다. 
 
-###
+#5
 
 따라서 연구의 전제는 다음과 같다.
 1. 기능적으로 완전히 반대인 RNA signature라 하더라도 같은 부분에 attention을 줬을 수 있다. 기능적인 grouping이 아닌 새로운 grouping이 필요하다.
