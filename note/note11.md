@@ -48,6 +48,6 @@ RNA 예측 성능을 높이는 방법으로 타 오믹스를 함께 학습하는
 따라서 연구의 전제는 다음과 같다.
 1. 기능적으로 완전히 반대인 RNA signature라 하더라도 같은 부분에 attention을 줬을 수 있다. 기능적인 grouping이 아닌 새로운 grouping이 필요하다.
 2. WSI로 예측 성능이 낮은 RNA signature 중에는 애초에 WSI에 잘 드러나지 않아서 였을수 있다. 이런 Signature들을 함께 학습시키면 부정적 전이만 일어나게 된다.
-3. 학습 단계에서 모델이 WSI뿐만 아니라 다른 오믹스를 참조하게 하면, WSI에 잘 드러나지 않는 몇몇 rna signature들이 attention하는 부위가 해당 오믹스 측면에서도 관찰할수 있다. 즉 attention이 변화한 부위가 새로운 attention 부위 발굴일 수 있다.
+3. 학습 단계에서 모델이 WSI뿐만 아니라 다른 오믹스를 참조하게 하면, WSI에 잘 드러나지 않는 몇몇 rna signature들이 attention하는 부위가 해당 오믹스 측면에서도 관찰할수 있다. 즉 attention이 변화한 부위가 생물학적으로 그 signature의 특성이 해당 오믹스가 반영되었을때 비로소 보인 attention 부위 발굴일 수 있다.
 
 
