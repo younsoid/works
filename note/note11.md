@@ -1,5 +1,8 @@
 # 연구 배경
 
+
+#1
+
 <img width="500" alt="image" src="https://github.com/user-attachments/assets/a233d9b8-efbc-4528-a931-f790d6250f0b" />
 
 Bagaev 논문은 Conserved pan-cancer microenvironment subtypes predict response to immunotherapy이다. 이 논문에서는 29 MFP signature를 정의하고, 그 signature를 기능에 따라 Anti-tumor / Pro-tumor / Angio·Fibrosis / Malignant로 나눴다. 이 Bagaev의 미세환경 signature 분류는 미세환경 연구의 기능적 분류에 많이 사용되고 있다. 
@@ -7,6 +10,10 @@ Bagaev 논문은 Conserved pan-cancer microenvironment subtypes predict response
 <img width="300" alt="image" src="https://github.com/user-attachments/assets/a347feaa-1774-46e1-a514-03c99a976645" />
 
 해당 논문은 이 29 signature의 expression pattern을 사용해서 환자를 IE·IE/F·F·D type으로 분류했다. (TCGA 8,024명 환자간 Pearson correlation -> Louvain clustering) 그리고 4개 type은 immune inflamed, immune excluded, immune desert 라는 특성의 연속 축 위에 있다고 말한다. 
+
+###
+
+#2 
 
 <img width="500" alt="image" src="https://github.com/user-attachments/assets/ef7ff1b7-f904-4c46-b9c6-66c30fc3340c" />
 
@@ -20,11 +27,15 @@ HistoTME 논문은 WSI를 받아서 이 29 signature를 예측하는 연구이�
 
 ###
 
+#3 
+
 WSI로 RNA를 예측하려는 연구들에서는 RNA 예측 성능을 놓고 개선 한계를 언급하기도 한다. WSI로 예측 성능이 낮은 RNA signature 중에는 WSI 이미지에서 잘 드러나지 않는 신호가 있을 수 있다는 것이다. 
 
 실제로 HE2RNA 연구에서는 WSI에서 잘 드러나는 RNA 경로와 그렇지 않은 RNA 경로를 언급하기도 했다. (A deep learning model to predict RNA-Seq expression of tumours from whole slide images)
 
 ###
+
+#4
 
 RNA 예측 성능을 높이는 방법으로 타 오믹스를 함께 학습하는것이 있다. RNA와 함께 타 오믹스를 학습해서 성능을 올린 연구도 있고 최근에는 RNA 없이 타 오믹스만으로 RNA를 예측하기도 했다. (Estimating gene expression from DNA methylation and copy number variation)
 
