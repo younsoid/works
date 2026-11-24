@@ -18,8 +18,6 @@ HistoTME 논문은 WSI를 받아서 이 29 signature를 예측하는 연구이�
 
 그리고 Anti-tumor / Pro-tumor group의 attention 을 비교했을때 유사하다고 나왔다. 즉 기능적으로 완전히 반대인 signature라 하더라도 같은 부분에 attention을 줬을 수 있다. attention이 비슷한 group 끼리 head를 묶어야 부정적 전이가 발생하지 않기 때문에 head grouping에 대해 새로운 방법이 필요하다. 
 
-또한 head grouping에서는 예측 성능 보다는 attention이 head마다 어디로 변화했는지를 tracking하는것이 중요하다. 
-
 ###
 
 WSI로 RNA를 예측하려는 연구들에서는 RNA 예측 성능을 놓고 개선 한계를 언급하기도 한다. WSI로 예측 성능이 낮은 RNA signature 중에는 WSI 이미지에서 잘 드러나지 않는 신호가 있을 수 있다는 것이다. 
