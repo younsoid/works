@@ -25,3 +25,10 @@ GDC PanCanAtlas에서 TCGA-CDR의 임상 정보를 가져왔다. 나이, 성별,
 그리고 외부데이터는 PanCanAtlas의 ABSOLUTE, Thorsson 연구의 면역 table을 가져왔다. ABSOLUTE는 tumor purity와 ploidy 데이터이다. Thorsson 연구의 면역 table은 면역 아형,  백혈구 비율, 기질 비율, TIL 영역 비율, 변이율, TCGA 아형 6개 데이터이다. 백혈구 비율은 methylation 기반으로 계산한 데이터이고 기질 비율은 ABSOLUTE 순도 + 백혈구 비율로 계산한 데이터이다. TIL 영역 비율은 Saltz 연구에서 WSI로부터 계산한 값이다.
 
 905명 중 나이, 성별, 인종, 병기, 조직형, 생존(OS/DSS/PFI), 흡연은 319-452/348-453, ABSOLUTE는 440/449, Thorsson 연구의 면역 table은 195–450/157–453명에서 존재했다. 
+
+### 4) 주요 유전자 변이와 비동의 변이 수
+
+폐암 gene 6개 TP53, KRAS, EGFR, STK11, KEAP1, NFE2L2에 대해서 환자별 비동의 변이 수를 확인했다. 분석은 maf 변이 데이터가 존재하는 444/440명에 대해서 수행했다. 
+
+결과를 보면 luad는 kras, egfr, stk11이 높고 lusc는 tp53, nfe2l2가 높다. stk11, keap1은 luad에서 높은데 cold tumor와 연관된 변이다.
+
