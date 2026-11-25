@@ -12,7 +12,7 @@
 
 1-5. 보조 오믹스 [#](https://github.com/younsoid/works/blob/main/note/note2.md)
 
-1-6. 보조오믹스별 정보량 [#](https://github.com/younsoid/works/blob/main/note/note2.md)
+1-6. 보조 오믹스별 정보량 [#](https://github.com/younsoid/works/blob/main/note/note2.md)
 
 1-7. attention head 그룹화 [#](https://github.com/younsoid/works/blob/main/note/note2.md)
 
