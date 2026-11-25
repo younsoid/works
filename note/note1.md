@@ -6,7 +6,9 @@
 
 그래서 데이터로는 dx slide, rna가 모두 존재하는 대상자를 사용했다. luad subtype은 452명, lusc subtype은 453명을 사용해서 총 905명이 예측 대상으로 사용되었다.
 
-905명이 가진 데이터 종류는 변이(maf), miRNA, 복제수 aneuploidy score, methylation, rppa, thorsson table, survival data, age, 병기. 
+905명이 가진 데이터 종류는 변이(maf), miRNA, 복제수 aneuploidy score, methylation, rppa, thorsson table, survival data, age, 병기이다. 
+
+변이, miRNA, methylation, rppa, survival data, age, 병기는 GDC db에서 가져왔다. 
 
 복제수 aneuploidy score는 Taylor 연구에서 매긴 숫자이다. Thorsson table은 면역 아형 C1~C6, 백혈구 비율, 기질비율, TIL 영역 비율, 비동의변이율, CIBERSORT의 22개 면역세포 비율 등의 정보다. 
 
