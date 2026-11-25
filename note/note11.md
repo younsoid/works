@@ -41,7 +41,6 @@ RNA 예측 성능을 높이는 방법으로 타 오믹스를 함께 학습하는
 
 HE2RNA 연구에서도 단백체와 RNA가 서로 담고있는 정보가 다르기 때문에 함께 사용하는것이 면역학적 분석에 유용하다고 언급하고 있다. 
 
-
 <img width="500" alt="image" src="https://github.com/user-attachments/assets/9fc5a25c-7f5c-49ad-8111-7e0376e8a0d7" />
 
 실제로 WSI 예측 모델에서 다양한 방법으로 타 오믹스 정보를 반영하는 연구가 있다. HistoMethyl 연구에서는 사전학습 정렬로 이를 구현했고, 유전자 변이, 생존, 메틸화 β값 예측에서 성능 향상을 확인했다. 
@@ -59,7 +58,12 @@ HE2RNA 연구에서도 단백체와 RNA가 서로 담고있는 정보가 다르�
 2. WSI로 예측 성능이 낮은 RNA signature 중에는 애초에 WSI에 잘 드러나지 않아서 였을수 있다. 이런 Signature들을 함께 학습시키면 부정적 전이만 일어나게 된다.
 3. 학습 단계에서 모델이 WSI뿐만 아니라 다른 오믹스를 참조하게 하면, WSI에 잘 드러나지 않는 몇몇 rna signature들이 attention하는 부위가 해당 오믹스 측면에서도 관찰할수 있다. 즉 attention이 변화한 부위가 생물학적으로 그 signature의 특성이 해당 오믹스가 반영되었을때 비로소 보인 attention 부위 발굴일 수 있다.
 
-내고싶은 결과는
+연구 설계는
+- 먼저 29 signature에서 rna 기능 group(기존 Bagaev 연구), rna coexpression group(폐암 특이적 group), co attention group(별도의 attention head를 할당했을때 29 signature 각각의 attention similarity로 grouping)을 식별하여 rna 기능이 유사하지만 attention이 다른 signature, rna 기능이 다르지만 attention이 유사한 signature를 찾는 연구를 설계하였다.
+- 또한 각 group으로 head를 묶은 모델의 attention을 확인하여, 그 차이가 이미지의 어떤 부분에서 발생하는지를 보고 그 부분의 미세환경 특성에 대한 생물학 분석을 진행하는 연구를 설계하였다.
+- 추가로 각 group으로 head를 묶을때 group마다 보조 정답 오믹스를 선택하여 모델을 학습시키고 마찬가지 attention의 차이를 확인하여 미세환경 분석을 진행하였다.
+
+(내고싶은 결과)
 1. wsi 로 미세환경 rna를 예측할때 rna 가 coexpression 되는 group과 grouping 없이 단일 head로 할당했을때 attention이 coattention 되는 group을 찾고 두 group의 차이를 보면 RNA는 co expression 되지만 attention이 다른 경우를 식별할수있고 이건 의미가 있다 친종양 항종양이 같은 곳을 봤기도 하고. 그리고 두번째로 각 group으로 head를 묶어서 모델을 학습하고 attention이 차이나는곳을 hovernet 등으로 세포 수준으로 확인하면 그 차이를 세포 수준에서 확인 해볼수있다. 
 2. wsi 로 미세환경 rna를 예측할때 보조 정답으로 오믹스를 넣어주면 rna로만 봤을때는 드러나지않던 해당 시그니처의 특이적 attention을 확인할수있고 마찬가지 보조 오믹스 없을때와 attention이 차이나는곳을 hovernet 등으로 세포 수준으로 확인하면 그 차이를 세포 수준에서 확인 해볼수있다. 
 
