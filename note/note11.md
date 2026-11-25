@@ -19,7 +19,7 @@ HistoTME 논문은 WSI를 받아서 이 29 signature를 예측하는 연구이�
 
 수행 결과 예측 성능은 grouping 전과 비교했을때 비슷했다. 그리고 그림처럼 Anti-tumor / Pro-tumor group의 attention 을 시각화해서 비교했을때 유사한것을 확인했다. 
 
-즉 기능적으로 완전히 반대인 signature라 하더라도 같은 부분에 attention을 줬을 수 있다. attention이 비슷한 group 끼리 head를 묶어야 부정적 전이가 발생하지 않기 때문에 head grouping에 대해 새로운 방법이 필요하다. 
+즉 기능적으로 완전히 반대인 signature라 하더라도 같은 부분에 attention을 줄 수 있다. 그렇다면 기능적으로 유사한 signature라 하더라도 다른 부분에 attention을 줄수 있다. 기능적 grouping도 좋지만 모델이 signature를 wsi에서 잘 학습하게 하여 wsi에서 생물학적으로 유효한 근거를 찾으려면, head grouping에 대해 새로운 방법이 필요하다. 
 
 #3 
 
