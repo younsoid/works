@@ -15,7 +15,7 @@ Bagaev 논문에서는 29 MFP signature를 정의하고, 그 signature를 기능
 
 HistoTME 논문은 WSI를 받아서 이 29 signature를 예측하는 연구이다. 이때 attention head를 Bagaev functional group인 Anti-tumor / Pro-tumor / Angio·Fibrosis / Malignant로 grouping 해서 multi task training을 수행했다. 
 
-<img width="500" alt="image" src="https://github.com/user-attachments/assets/dc1110b3-9409-49ca-9503-22980a35913b" />
+<img width="300" alt="image" src="https://github.com/user-attachments/assets/dc1110b3-9409-49ca-9503-22980a35913b" />
 
 수행 결과 예측 성능은 grouping 전과 비교했을때 비슷했다. 그리고 그림처럼 Anti-tumor / Pro-tumor group의 attention 을 시각화해서 비교했을때 유사한것을 확인했다. 
 
