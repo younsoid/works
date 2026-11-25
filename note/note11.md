@@ -44,11 +44,9 @@ HE2RNA 연구에서도 단백체와 RNA가 서로 담고있는 정보가 다르�
 
 <img width="500" alt="image" src="https://github.com/user-attachments/assets/9fc5a25c-7f5c-49ad-8111-7e0376e8a0d7" />
 
-실제로 WSI 예측 모델에서 다양한 방법으로 타 오믹스 정보를 반영하는 연구가 있다(HistoMethyl, MKD, G-HANet, PathLUPI, Fuji). 
+실제로 WSI 예측 모델에서 다양한 방법으로 타 오믹스 정보를 반영하는 연구가 있다. HistoMethyl 연구에서는 사전학습 정렬로 이를 구현했고, 유전자 변이, 생존, 메틸화 β값 예측에서 성능 향상을 확인했다. 
 
-HistoMethyl 연구에서는 사전학습 정렬로 이를 구현했고, 유전자 변이, 생존, 메틸화 β값 예측에서 성능 향상을 확인했다. 
-
-이처럼 학습 단계에서 다른 오믹스를 참조하고, 예측 단계에선 H&E만 쓰는 연구가 많지만 RNA 예측에 보조 정답으로 타 오믹스를 사용한 연구는 없다. 
+이처럼 학습 단계에서 다른 오믹스를 참조한 연구가 많지만 (HistoMethyl, MKD, G-HANet, PathLUPI, Fuji), 보조 정답으로 타 오믹스를 사용한 연구는 없다. 
 
 #5
 
