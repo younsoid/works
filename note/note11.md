@@ -46,7 +46,11 @@ HE2RNA 연구에서도 단백체와 RNA가 서로 담고있는 정보가 다르�
 
 실제로 WSI 예측 모델에서 다양한 방법으로 타 오믹스 정보를 반영하는 연구가 있다. HistoMethyl 연구에서는 사전학습 정렬로 이를 구현했고, 유전자 변이, 생존, 메틸화 β값 예측에서 성능 향상을 확인했다. 
 
-이처럼 학습 단계에서 다른 오믹스를 참조한 연구가 많지만 (HistoMethyl, MKD, G-HANet, PathLUPI, Fuji), 보조 정답으로 타 오믹스를 사용한 연구는 없다. 
+이처럼 학습 단계에서 다른 오믹스를 참조하는 다양한 방법이 있는데 (HistoMethyl, MKD, G-HANet, PathLUPI, Fuji) 예측 대상이 RNA인 연구는 없었다. 이에 RNA 미세환경 시그니처를 주 정답, 타 오믹스를 보조 정답으로 한 예측 연구를 설계하게 되었다.
+
+<img width="300" alt="image" src="https://github.com/user-attachments/assets/1c1a8c4e-31a5-4b99-a589-fa83b2550a70" />
+
+미세환경 연구 분야에서는 Nahhas 연구가 타 오믹스 반영을 보조 정답으로 구현한바 있다. 하지만 분류 대상이 MSI·HRD 분류였으며 미세환경 지표를 보조 정답으로 사용하였다. 해당 연구에서 사용한 미세환경 지표는 DNA 메틸화 기반 백혈구 비율 (LF), 복제수 + 메틸화 기반 기질 비율 (SF), RNA 기반 림프구 침윤 점수 (LISS), RNA signature인 증식 (Prolif), 복제수 기반 종양 내 이질성 (ITH) 데이터였다. 
 
 #5
 
@@ -55,6 +59,9 @@ HE2RNA 연구에서도 단백체와 RNA가 서로 담고있는 정보가 다르�
 2. WSI로 예측 성능이 낮은 RNA signature 중에는 애초에 WSI에 잘 드러나지 않아서 였을수 있다. 이런 Signature들을 함께 학습시키면 부정적 전이만 일어나게 된다.
 3. 학습 단계에서 모델이 WSI뿐만 아니라 다른 오믹스를 참조하게 하면, WSI에 잘 드러나지 않는 몇몇 rna signature들이 attention하는 부위가 해당 오믹스 측면에서도 관찰할수 있다. 즉 attention이 변화한 부위가 생물학적으로 그 signature의 특성이 해당 오믹스가 반영되었을때 비로소 보인 attention 부위 발굴일 수 있다.
 
+내고싶은 결과는
+1. wsi 로 미세환경 rna를 예측할때 rna 가 coexpression 되는 group과 grouping 없이 단일 head로 할당했을때 attention이 coattention 되는 group을 찾고 두 group의 차이를 보면 RNA는 co expression 되지만 attention이 다른 경우를 식별할수있고 이건 의미가 있다 친종양 항종양이 같은 곳을 봤기도 하고. 그리고 두번째로 각 group으로 head를 묶어서 모델을 학습하고 attention이 차이나는곳을 hovernet 등으로 세포 수준으로 확인하면 그 차이를 세포 수준에서 확인 해볼수있다. 
+2. wsi 로 미세환경 rna를 예측할때 보조 정답으로 오믹스를 넣어주면 rna로만 봤을때는 드러나지않던 해당 시그니처의 특이적 attention을 확인할수있고 마찬가지 보조 오믹스 없을때와 attention이 차이나는곳을 hovernet 등으로 세포 수준으로 확인하면 그 차이를 세포 수준에서 확인 해볼수있다. 
 
 #출처
 - Bagaev 논문 - Conserved pan-cancer microenvironment subtypes predict response to immunotherapy
@@ -62,3 +69,5 @@ HE2RNA 연구에서도 단백체와 RNA가 서로 담고있는 정보가 다르�
 - HE2RNA 논문 - A deep learning model to predict RNA-Seq expression of tumours from whole slide images
 - Ash 논문 - Joint analysis of expression levels and histological images identifies genes associated with tissue morphology
 - HistoMethyl 논문 - A multimodal foundation model linking histopathology and DNA methylation
+- Nahhas 논문 - Joint multi-task learning improves weakly-supervised biomarker prediction in computational pathology
+
