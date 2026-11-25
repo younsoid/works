@@ -10,7 +10,7 @@
 
 1-4. MFP score 보조 데이터 [#](https://github.com/younsoid/works/blob/main/note/note1.md) / update: [#](https://github.com/younsoid/works/blob/main/note/note13.md)
 
-1-5. 보조 오믹스 [#](https://github.com/younsoid/works/blob/main/note/note2.md)
+1-5. 보조 오믹스 [#](https://github.com/younsoid/works/blob/main/note/note2.md) / update: [#](https://github.com/younsoid/works/blob/main/note/note14.md)
 
 1-6. 보조 오믹스별 정보량 [#](https://github.com/younsoid/works/blob/main/note/note2.md)
 
