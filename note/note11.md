@@ -25,11 +25,11 @@ HistoTME 논문은 WSI를 받아서 이 29 signature를 예측하는 연구이�
 
 WSI로 RNA를 예측하려는 연구들에서는 RNA 예측 성능을 놓고 개선 한계를 언급하기도 한다. WSI로 예측 성능이 낮은 RNA signature 중에는 WSI 이미지에서 잘 드러나지 않는 신호가 있을 수 있다는 것이다. 
 
-<img width="500" alt="image" src="https://github.com/user-attachments/assets/be5161a5-19f0-4c2c-ac40-d39314e76aa5" />
+<img width="300" alt="image" src="https://github.com/user-attachments/assets/be5161a5-19f0-4c2c-ac40-d39314e76aa5" />
 
 실제로 HE2RNA 연구에서 WSI를 사용해서 예측이 잘 되는 RNA 경로와 상대적으로 그렇지 않은 RNA 경로가 있었다. (면역 경로(T 세포 86%, B 세포 75%)는 대부분의 암종에서 무작위보다 잘 예측, 나머지 네 경로(혈관신생 50%, 저산소·DNA 복구·세포 주기 54%)는 절반 정도의 암종에서만 예측)
 
-<img width="300" alt="image" src="https://github.com/user-attachments/assets/f83a8d3b-9bcf-4fd5-9bee-f50b70bf34bc" />
+<img width="500" alt="image" src="https://github.com/user-attachments/assets/f83a8d3b-9bcf-4fd5-9bee-f50b70bf34bc" />
 
 Ash 연구는 유전자 발현과 이미지 특징을 함께 분석(CCA)해서 "형태와 같이 변하는 유전자 묶음"을 식별하였는데 세포외기질, 혈관, 혈액·면역 세포 구성처럼 세포 구성이나 조직 구조로 보이는 유전자 묶음이 형태와 연결됨을 확인했다. 즉 WSI 형태로 식별이 용이한 경로가 있고 그렇지 않은 경로가 있음을 알수있다.
 
