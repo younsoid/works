@@ -1,6 +1,6 @@
 # 연구 정리
 
-0. 연구 배경 [#](https://github.com/younsoid/works/blob/main/note/note11.md)
+0-1. 연구 배경 [#](https://github.com/younsoid/works/blob/main/note/note11.md)
 
 ### 1. 데이터 준비
 
