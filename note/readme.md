@@ -12,7 +12,7 @@
 
 1-5. 보조 오믹스 [#](https://github.com/younsoid/works/blob/main/note/note2.md) / update: [#](https://github.com/younsoid/works/blob/main/note/note14.md)
 
-1-6. 보조 오믹스별 정보량 [#](https://github.com/younsoid/works/blob/main/note/note2.md) / update: [#](https://github.com/younsoid/works/blob/main/note/note14.md)
+1-6. 보조 오믹스별 정보량 [#](https://github.com/younsoid/works/blob/main/note/note2.md) / update: [#](https://github.com/younsoid/works/blob/main/note/note16.md)
 
 ### 2. H&E slide 처리
 
