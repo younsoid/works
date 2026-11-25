@@ -49,7 +49,7 @@ WSI로 RNA를 예측한 HE2RNA 연구에서도 단백체와 RNA가 서로 담고
 
 <img width="500" alt="image" src="https://github.com/user-attachments/assets/1c1a8c4e-31a5-4b99-a589-fa83b2550a70" />
 
-미세환경 연구 분야에서는 Nahhas 연구가 타 오믹스 반영을 보조 정답으로 구현한바 있다. 하지만 분류 대상이 MSI·HRD 분류였으며 미세환경 지표를 보조 정답으로 사용하였다. 해당 연구에서 사용한 미세환경 지표는 DNA 메틸화 기반 백혈구 비율 (LF), 복제수 + 메틸화 기반 기질 비율 (SF), RNA 기반 림프구 침윤 점수 (LISS), RNA signature인 증식 (Prolif), 복제수 기반 종양 내 이질성 (ITH) 데이터였다. 
+미세환경 연구 분야에서는 Nahhas 연구가 타 오믹스 반영을 보조 정답으로 구현하고 성능 개선을 확인한바 있다. 하지만 분류 대상이 MSI·HRD 분류였으며 미세환경 지표를 보조 정답으로 사용하였다. 해당 연구에서 사용한 미세환경 지표는 DNA 메틸화 기반 백혈구 비율 (LF), 복제수 + 메틸화 기반 기질 비율 (SF), RNA 기반 림프구 침윤 점수 (LISS), RNA signature인 증식 (Prolif), 복제수 기반 종양 내 이질성 (ITH) 데이터였다. 
 
 #5
 
