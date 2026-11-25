@@ -39,7 +39,7 @@ RNA 예측 성능을 높이는 방법으로 타 오믹스를 함께 학습하는
 
 <img width="300" alt="image" src="https://github.com/user-attachments/assets/c33ed82a-e7b3-4975-86bd-6e83348c3b8a" />
 
-HE2RNA 연구에서도 단백체와 RNA가 서로 담고있는 정보가 다르기 때문에 함께 사용하는것이 면역학적 분석에 유용하다고 언급하고 있다. 
+WSI로 RNA를 예측한 HE2RNA 연구에서도 단백체와 RNA가 서로 담고있는 정보가 다르기 때문에 함께 사용하는것이 면역학적 분석에 유용하다고 언급하고 있다. 
 
 <img width="500" alt="image" src="https://github.com/user-attachments/assets/9fc5a25c-7f5c-49ad-8111-7e0376e8a0d7" />
 
