@@ -1,7 +1,5 @@
 # 연구 정리
 
-0-1. 연구 배경 [#](https://github.com/younsoid/works/blob/main/note/note11.md)
-
 ### 1. 데이터 준비
 
 1-1. 코호트 구성 [#](https://github.com/younsoid/works/blob/main/note/note1.md)
@@ -74,5 +72,7 @@
 # 논문 리뷰
 
 1. A Pathway-Structured Privileged Distillation Framework for Deployable Computational Pathology [#](https://github.com/younsoid/works/blob/main/note/paper1.md)
+
+cf) 연구 배경 [#](https://github.com/younsoid/works/blob/main/note/note11.md)
 
 #
