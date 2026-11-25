@@ -5,7 +5,7 @@
 
 <img width="500" alt="image" src="https://github.com/user-attachments/assets/a233d9b8-efbc-4528-a931-f790d6250f0b" />
 
-Bagaev 논문은 Conserved pan-cancer microenvironment subtypes predict response to immunotherapy이다. 이 논문에서는 29 MFP signature를 정의하고, 그 signature를 기능에 따라 Anti-tumor / Pro-tumor / Angio·Fibrosis / Malignant로 나눴다. 이 Bagaev의 미세환경 signature 분류는 미세환경 연구의 기능적 분류에 많이 사용되고 있다. 
+Bagaev 논문에서는 29 MFP signature를 정의하고, 그 signature를 기능에 따라 Anti-tumor / Pro-tumor / Angio·Fibrosis / Malignant로 나눴다. 이 Bagaev의 미세환경 signature 분류는 미세환경 연구의 기능적 분류에 많이 사용되고 있다. 
 
 <img width="300" alt="image" src="https://github.com/user-attachments/assets/a347feaa-1774-46e1-a514-03c99a976645" />
 
@@ -45,3 +45,9 @@ RNA 예측 성능을 높이는 방법으로 타 오믹스를 함께 학습하는
 3. 학습 단계에서 모델이 WSI뿐만 아니라 다른 오믹스를 참조하게 하면, WSI에 잘 드러나지 않는 몇몇 rna signature들이 attention하는 부위가 해당 오믹스 측면에서도 관찰할수 있다. 즉 attention이 변화한 부위가 생물학적으로 그 signature의 특성이 해당 오믹스가 반영되었을때 비로소 보인 attention 부위 발굴일 수 있다.
 
 
+#출처
+
+- Bagaev 논문 - Conserved pan-cancer microenvironment subtypes predict response to immunotherapy
+- HistoTME 논문 - Predicting the tumor microenvironment composition and immunotherapy response in non-small cell lung cancer from digital histopathology images
+- HE2RNA 논문 - A deep learning model to predict RNA-Seq expression of tumours from whole slide images
+- HistoMethyl 논문 - A multimodal foundation model linking histopathology and DNA methylation
