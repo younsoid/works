@@ -2,7 +2,7 @@
 
 ### 1. 데이터 준비
 
-1-1. 코호트 구성 [#](https://github.com/younsoid/works/blob/main/note/note1.md)
+1-1. 코호트 구성 [#](https://github.com/younsoid/works/blob/main/note/note1.md) (update: [#](https://github.com/younsoid/works/blob/main/note/note12.md)
 
 1-2. MFP 29 signature 재현 [#](https://github.com/younsoid/works/blob/main/note/note1.md)
 
