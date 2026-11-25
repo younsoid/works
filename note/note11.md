@@ -25,11 +25,17 @@ HistoTME 논문은 WSI를 받아서 이 29 signature를 예측하는 연구이�
 
 WSI로 RNA를 예측하려는 연구들에서는 RNA 예측 성능을 놓고 개선 한계를 언급하기도 한다. WSI로 예측 성능이 낮은 RNA signature 중에는 WSI 이미지에서 잘 드러나지 않는 신호가 있을 수 있다는 것이다. 
 
-실제로 HE2RNA 연구에서는 WSI에서 잘 드러나는 RNA 경로와 그렇지 않은 RNA 경로를 언급하기도 했다. (A deep learning model to predict RNA-Seq expression of tumours from whole slide images)
+<img width="300" alt="image" src="https://github.com/user-attachments/assets/be5161a5-19f0-4c2c-ac40-d39314e76aa5" />
+
+실제로 HE2RNA 연구에서 WSI를 사용해서 예측이 잘 되는 RNA 경로와 상대적으로 그렇지 않은 RNA 경로가 있었다. (면역 경로(T 세포 86%, B 세포 75%)는 대부분의 암종에서 무작위보다 잘 예측, 나머지 네 경로(혈관신생 50%, 저산소·DNA 복구·세포 주기 54%)는 절반 정도의 암종에서만 예측)
 
 #4
 
 RNA 예측 성능을 높이는 방법으로 타 오믹스를 함께 학습하는것이 있다. RNA와 함께 타 오믹스를 학습해서 성능을 올린 연구도 있고 최근에는 RNA 없이 타 오믹스만으로 RNA를 예측하기도 했다. (Estimating gene expression from DNA methylation and copy number variation) 
+
+<img width="300" alt="image" src="https://github.com/user-attachments/assets/c33ed82a-e7b3-4975-86bd-6e83348c3b8a" />
+
+HE2RNA 연구에서도 단백체와 RNA가 서로 담고있는 정보가 다르기 때문에 함께 사용하는것이 면역학적 분석에 유용하다고 언급하고 있다. 
 
 실제로 WSI 예측 모델에서 다양한 방법으로 타 오믹스 정보를 반영하는 연구가 있다. (HistoMethyl, MKD, G-HANet, PathLUPI, Fuji) HistoMethyl 연구에서는 사전학습 정렬로 이를 구현했고, 유전자 변이, 생존, 메틸화 β값 예측에서 성능 향상을 확인했다.
 
