@@ -12,12 +12,12 @@ Bagaev 연구에서는 29 signature를 기반으로 샘플을 IE, IE/F, F, D 4 g
 
 ### 1-4. MFP score 보조 데이터
 
-1) 미세환경 관련 외부데이터
+1-4-1. 미세환경 관련 외부데이터
 
 29 mfp score 외에도 미세환경 외부데이터를 3개 수집했다. Yoshihara 연구의 ESTIMATE, Becht 연구의 MCP counter, Thorsson 연구에서 재계산한 CIBERSORT 데이터이다. 각각 2개, 10개, 22개 항목이다.
 
 여기서 ESTIMATE와 MCP counter는 RNA로 계산한 값이고 CIBERSORT는 RNA+Methylation 이다.
 
-2) 종양 관련 외부데이터
+1-4-2. 종양 관련 외부데이터
 
 ABSOLUTE의 tumor purity와 ploidy 데이터 외에도 종양 관련 외부데이터를 2개 수집했다. Taylor 연구의 aneuploidy score, Aran 연구의tumor purity이다. (ESTIMATE, ABSOLUTE, LUMP, IHC, CPE) 앞의 4개 각각은 RNA, ploidy, methylation, 병리의 판독으로 계산한 값이고 CPE는 4개 항목의 합이다. 
