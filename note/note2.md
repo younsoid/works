@@ -74,10 +74,11 @@ g9는 luad에서는 pc1/2/3/other이 각각 8/8/10/3이 나왔고 lusc에서는 
 그리고 거의 모든 grouping에서 각 head에 할당된 보조 오믹스가 동일했다. luad는 모든 head의 보조 오믹스가 rppa였고 lusc는 g9 pc3 head 제외하고는 모든 head의 보조 오믹스가 methylation이었다.
 
 여기서 알수있는것들은
-1. 무작위로 묶어도 (gr) group 내 결속력(상관)이 0.36~~0.48로 꽤 높다. 29 signature를 하나로 묶은 g1도 0.385/0.422이다. 그 이유는 29 signature가 모두 미세환경 시그니처여서 같은 흐름을 따르기 때문일수있다. 종양에 면역세포와 기질세포가 많은 환자는 t cell, b cell, macrophage, caf score가 다같이 높고, 종양세포가 많은 환자는 다 같이 낮다. 즉 signature마다 세부 내용이 달라도 미세환경 세포가 얼마나 많은가 라는 공통 축을 같이 따른다. 실제로 g6 에서 silluette score 기반으로 grouping 했을때 [28,1]이 뚜렷하게 나왔다.
+
+1-무작위로 묶어도 (gr) group 내 결속력(상관)이 0.36~~0.48로 꽤 높다. 29 signature를 하나로 묶은 g1도 0.385/0.422이다. 그 이유는 29 signature가 모두 미세환경 시그니처여서 같은 흐름을 따르기 때문일수있다. 종양에 면역세포와 기질세포가 많은 환자는 t cell, b cell, macrophage, caf score가 다같이 높고, 종양세포가 많은 환자는 다 같이 낮다. 즉 signature마다 세부 내용이 달라도 미세환경 세포가 얼마나 많은가 라는 공통 축을 같이 따른다. 실제로 g6 에서 silluette score 기반으로 grouping 했을때 [28,1]이 뚜렷하게 나왔다.
 여기서 알수있는건 signature들이 이미 큰 축을 공유하고 있기 때문에 어떻게 묶든 한 head 안의 signature들이 비슷한 학습신호(환자간차이신호)를 보려고 할것이다. (비슷한 부분을 보려고 하는건 아니겠지만). 그러므로 묶는 방식을 바꾸면 모델이 attention한 부분이 다르더라도 성능 차이는 크게 나오지 않을 것으로 예상할수있다. 
 
-2. 결속력이 약한 group은 attention을 공유하는것이 오히려 성능을 떨어뜨릴수있다. 한 group에 할당된, 즉 한 head를 할당받은 signature 끼리는 슬라이드에서 어느 타일을 attention할지 같이 정하는데 두 signature가 같은 방향으로 움직이면 같은 부분을 보면 되니까 공유가 쉽지만 반대 방향으로 움직이면 한 head가 서로 다른곳을 동시에 봐야해서 타협이 생겨서 둘다 성능 면에서 손해를 볼수있다. 이 부정적 전이가 나타날걸로 생각되는게 g2의 n=2 group인데, Proliferation_rate, EMT_signature이고 group 내 상관이 0에 가깝거나 음수여서 proliferation이 높을수록 emt가 낮은것이다. proliferation은 종양세포가 많을수록(purity가 높을수록) 높고 emt는 기질이 많을수록 높기 때문. 즉 두 signature의 단서는 도메인 지식만 보더라도 슬라이드에서 각각 종양실질/기질로 다른곳을 보는게 맞기때문에 한 head로 동시에 맞히기 어렵다. g2의 n=11 group은 group 내 상관이 0.44/0.52로 낮진 않지만 타 group 과의 상관도 0.42/0.52여서 group 내와 group 간이 비슷하다. 그래서 grouping 되었지만 뭉쳐있지 않다 즉 그 group의 기능 분류는 rna에서 하나의 덩어리로 보이지 않는다. 
+2-결속력이 약한 group은 attention을 공유하는것이 오히려 성능을 떨어뜨릴수있다. 한 group에 할당된, 즉 한 head를 할당받은 signature 끼리는 슬라이드에서 어느 타일을 attention할지 같이 정하는데 두 signature가 같은 방향으로 움직이면 같은 부분을 보면 되니까 공유가 쉽지만 반대 방향으로 움직이면 한 head가 서로 다른곳을 동시에 봐야해서 타협이 생겨서 둘다 성능 면에서 손해를 볼수있다. 이 부정적 전이가 나타날걸로 생각되는게 g2의 n=2 group인데, Proliferation_rate, EMT_signature이고 group 내 상관이 0에 가깝거나 음수여서 proliferation이 높을수록 emt가 낮은것이다. proliferation은 종양세포가 많을수록(purity가 높을수록) 높고 emt는 기질이 많을수록 높기 때문. 즉 두 signature의 단서는 도메인 지식만 보더라도 슬라이드에서 각각 종양실질/기질로 다른곳을 보는게 맞기때문에 한 head로 동시에 맞히기 어렵다. g2의 n=11 group은 group 내 상관이 0.44/0.52로 낮진 않지만 타 group 과의 상관도 0.42/0.52여서 group 내와 group 간이 비슷하다. 그래서 grouping 되었지만 뭉쳐있지 않다 즉 그 group의 기능 분류는 rna에서 하나의 덩어리로 보이지 않는다. 
 
 +) grouping의 이득과 손실 계산: luad 의 G2 방식에서 첫번째 group에 속한 시그니처가 11개인데, 각 11개 시그니처마다 보조 오믹스가 채택되어있다. 이 11개는 head 하나를 사용하는데 연구 설계상 head당 보조 오믹스를 하나 사용하여야한다. 그래서 group 마다 보조 오믹스를 채택해줘야한다. group의 보조 오믹스를 고르는 방식은 현재 group 내 시그니처들의 R2 값을 평균해서 가장 높은 R2인 오믹스를 채택하는 방식으로 정했다. 
 
