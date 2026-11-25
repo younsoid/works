@@ -66,6 +66,7 @@
 
 9-3. grouping 이득 확인 (lusc) [#](https://github.com/younsoid/works/blob/main/note/note6.md)
 
+cf) 연구 배경 [#](https://github.com/younsoid/works/blob/main/note/note11.md)
 
 #
 
@@ -73,6 +74,5 @@
 
 1. A Pathway-Structured Privileged Distillation Framework for Deployable Computational Pathology [#](https://github.com/younsoid/works/blob/main/note/paper1.md)
 
-cf) 연구 배경 [#](https://github.com/younsoid/works/blob/main/note/note11.md)
 
 #
