@@ -63,7 +63,7 @@ HE2RNA 연구에서도 단백체와 RNA가 서로 담고있는 정보가 다르�
 - 또한 각 group으로 head를 묶은 모델의 attention을 확인하여, 그 차이가 이미지의 어떤 부분에서 발생하는지를 보고 그 부분의 미세환경 특성에 대한 생물학 분석을 진행하는 연구를 설계하였다.
 - 추가로 각 group으로 head를 묶을때 group마다 보조 정답 오믹스를 선택하여 모델을 학습시키고 마찬가지 attention의 차이를 확인하여 미세환경 분석을 진행하였다.
 
-(내고싶은 결과)
+(기대 결과)
 1. wsi 로 미세환경 rna를 예측할때 rna 가 coexpression 되는 group과 grouping 없이 단일 head로 할당했을때 attention이 coattention 되는 group을 찾고 두 group의 차이를 보면 RNA는 co expression 되지만 attention이 다른 경우를 식별할수있고 이건 의미가 있다 친종양 항종양이 같은 곳을 봤기도 하고. 그리고 두번째로 각 group으로 head를 묶어서 모델을 학습하고 attention이 차이나는곳을 hovernet 등으로 세포 수준으로 확인하면 그 차이를 세포 수준에서 확인 해볼수있다. 
 2. wsi 로 미세환경 rna를 예측할때 보조 정답으로 오믹스를 넣어주면 rna로만 봤을때는 드러나지않던 해당 시그니처의 특이적 attention을 확인할수있고 마찬가지 보조 오믹스 없을때와 attention이 차이나는곳을 hovernet 등으로 세포 수준으로 확인하면 그 차이를 세포 수준에서 확인 해볼수있다. 
 
