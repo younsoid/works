@@ -14,8 +14,6 @@
 
 1-6. 보조 오믹스별 정보량 [#](https://github.com/younsoid/works/blob/main/note/note2.md)
 
-1-7. attention head 그룹화 [#](https://github.com/younsoid/works/blob/main/note/note2.md)
-
 ### 2. H&E slide 처리
 
 ### 3. Slide tiling과 QC
@@ -68,6 +66,7 @@
 
 cf) 연구 배경 [#](https://github.com/younsoid/works/blob/main/note/note11.md)
 
+cf2) attention head 그룹화 [#](https://github.com/younsoid/works/blob/main/note/note15.md)
 #
 
 # 논문 리뷰
