@@ -19,7 +19,7 @@ HistoTME 논문은 WSI를 받아서 이 29 signature를 예측하는 연구이�
 
 <img width="500" alt="image" src="https://github.com/user-attachments/assets/dc1110b3-9409-49ca-9503-22980a35913b" />
 
-그리고 Anti-tumor / Pro-tumor group의 attention 을 시각화해서 비교했을때 유사한것을 확인했다. 즉 기능적으로 완전히 반대인 signature라 하더라도 같은 부분에 attention을 줬을 수 있다. attention이 비슷한 group 끼리 head를 묶어야 부정적 전이가 발생하지 않기 때문에 head grouping에 대해 새로운 방법이 필요하다. 
+그리고 그림처럼 Anti-tumor / Pro-tumor group의 attention 을 시각화해서 비교했을때 유사한것을 확인했다. 즉 기능적으로 완전히 반대인 signature라 하더라도 같은 부분에 attention을 줬을 수 있다. attention이 비슷한 group 끼리 head를 묶어야 부정적 전이가 발생하지 않기 때문에 head grouping에 대해 새로운 방법이 필요하다. 
 
 #3 
 
@@ -29,6 +29,10 @@ WSI로 RNA를 예측하려는 연구들에서는 RNA 예측 성능을 놓고 개
 
 실제로 HE2RNA 연구에서 WSI를 사용해서 예측이 잘 되는 RNA 경로와 상대적으로 그렇지 않은 RNA 경로가 있었다. (면역 경로(T 세포 86%, B 세포 75%)는 대부분의 암종에서 무작위보다 잘 예측, 나머지 네 경로(혈관신생 50%, 저산소·DNA 복구·세포 주기 54%)는 절반 정도의 암종에서만 예측)
 
+<img width="300" alt="image" src="https://github.com/user-attachments/assets/f83a8d3b-9bcf-4fd5-9bee-f50b70bf34bc" />
+
+Ash 연구는 유전자 발현과 이미지 특징을 함께 분석(CCA)해서 "형태와 같이 변하는 유전자 묶음"을 식별하였는데 세포외기질, 혈관, 혈액·면역 세포 구성처럼 세포 구성이나 조직 구조로 보이는 유전자 묶음이 형태와 연결됨을 확인했다. 즉 WSI 형태로 식별이 용이한 경로가 있고 그렇지 않은 경로가 있음을 알수있다.
+
 #4
 
 RNA 예측 성능을 높이는 방법으로 타 오믹스를 함께 학습하는것이 있다. RNA와 함께 타 오믹스를 학습해서 성능을 올린 연구도 있고 최근에는 RNA 없이 타 오믹스만으로 RNA를 예측하기도 했다. (Estimating gene expression from DNA methylation and copy number variation) 
@@ -37,7 +41,11 @@ RNA 예측 성능을 높이는 방법으로 타 오믹스를 함께 학습하는
 
 HE2RNA 연구에서도 단백체와 RNA가 서로 담고있는 정보가 다르기 때문에 함께 사용하는것이 면역학적 분석에 유용하다고 언급하고 있다. 
 
-실제로 WSI 예측 모델에서 다양한 방법으로 타 오믹스 정보를 반영하는 연구가 있다. (HistoMethyl, MKD, G-HANet, PathLUPI, Fuji) HistoMethyl 연구에서는 사전학습 정렬로 이를 구현했고, 유전자 변이, 생존, 메틸화 β값 예측에서 성능 향상을 확인했다.
+실제로 WSI 예측 모델에서 다양한 방법으로 타 오믹스 정보를 반영하는 연구가 있다. (HistoMethyl, MKD, G-HANet, PathLUPI, Fuji) 
+
+<img width="500" alt="image" src="https://github.com/user-attachments/assets/9fc5a25c-7f5c-49ad-8111-7e0376e8a0d7" />
+
+HistoMethyl 연구에서는 사전학습 정렬로 이를 구현했고, 유전자 변이, 생존, 메틸화 β값 예측에서 성능 향상을 확인했다.
 
 이처럼 학습 단계에서 다른 오믹스를 참조하고, 추론은 H&E만 쓰는 연구가 많지만 RNA 예측에 보조 정답으로 타 오믹스를 사용한 연구는 없다. 
 
@@ -50,8 +58,8 @@ HE2RNA 연구에서도 단백체와 RNA가 서로 담고있는 정보가 다르�
 
 
 #출처
-
 - Bagaev 논문 - Conserved pan-cancer microenvironment subtypes predict response to immunotherapy
 - HistoTME 논문 - Predicting the tumor microenvironment composition and immunotherapy response in non-small cell lung cancer from digital histopathology images
 - HE2RNA 논문 - A deep learning model to predict RNA-Seq expression of tumours from whole slide images
+- Ash 논문 - Joint analysis of expression levels and histological images identifies genes associated with tissue morphology
 - HistoMethyl 논문 - A multimodal foundation model linking histopathology and DNA methylation
