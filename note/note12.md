@@ -10,6 +10,13 @@ dx slide, rna가 모두 있으면서 do not use가 아닌 샘플은 905명(452/4
 
 <img width="200" alt="image" src="https://github.com/user-attachments/assets/ba776a03-1f1f-46ad-891d-10b561a8fff1" />
 
++) 추가
+methylation, rppa는 보조오믹스로 사용된다. 29 signature 각각에서 methylation, rppa 값으로 rna를 회귀해서 R값이 높은 오믹스를 채택하는 방식이다. 
+
+즉 보조오믹스 채택을 위한 회귀분석은 905명에 대해서가 아니라 methylation, rppa가 모두 존재하는 샘플만 사용해서 수행할수있다. 
+
+확인 결과 둘다 존재하는 샘플수는 luad 273, lusc 232명이었다. 
+
 #### 2) 오믹스 전처리
 
 변이는 비동의 변이만 남겼다. (221,514/296,382, 74.7%)
@@ -30,9 +37,12 @@ GDC PanCanAtlas에서 TCGA-CDR의 임상 정보를 가져왔다. 나이, 성별,
 
 905명 중 나이, 성별, 인종, 병기, 조직형, 생존(OS/DSS/PFI), 흡연은 319-452/348-453, ABSOLUTE는 440/449, Thorsson 연구의 면역 table은 195–450/157–453명에서 존재했다. 
 
+<img width="2379" height="2299" alt="fig01_clinical_coverage" src="https://github.com/user-attachments/assets/71342c19-6627-41af-b280-600dec26eb6a" />
+
 #### 4) 주요 유전자 변이와 비동의 변이 수
 
 폐암 gene 6개 TP53, KRAS, EGFR, STK11, KEAP1, NFE2L2에 대해서 환자별 비동의 변이 수를 확인했다. 분석은 maf 변이 데이터가 존재하는 444/440명에 대해서 수행했다. 
 
 결과를 보면 luad는 kras, egfr, stk11이 높고 lusc는 tp53, nfe2l2가 높다. stk11, keap1은 luad에서 높은데 cold tumor와 연관된 변이다.
 
+<img width="500" alt="fig01_driver_mutations" src="https://github.com/user-attachments/assets/fcb8eb50-2f4d-48cb-80db-a20ea4de03aa" />
