@@ -37,7 +37,7 @@ GDC PanCanAtlas에서 TCGA-CDR의 임상 정보를 가져왔다. 나이, 성별,
 
 905명 중 나이, 성별, 인종, 병기, 조직형, 생존(OS/DSS/PFI), 흡연은 319-452/348-453, ABSOLUTE는 440/449, Thorsson 연구의 면역 table은 195–450/157–453명에서 존재했다. 
 
-<img width="2379" height="2299" alt="fig01_clinical_coverage" src="https://github.com/user-attachments/assets/71342c19-6627-41af-b280-600dec26eb6a" />
+<img width="1200" alt="fig01_clinical_coverage" src="https://github.com/user-attachments/assets/71342c19-6627-41af-b280-600dec26eb6a" />
 
 #### 4) 주요 유전자 변이와 비동의 변이 수
 
