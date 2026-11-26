@@ -21,7 +21,7 @@ methylation은 cg filtering을 해서 ch, rs를 제거하고, Zhou 연구의 450
 
 그리고 결측이 20% 이상인 경우를 filtering하고, 20% 미만인 경우 평균값으로 채웠다. 결과적으로 486,427중 400,772/397,085개가 남았다. (이 작업은 laud/lusc 따로 진행)
 
-<img width="600" alt="fig01_omics_qc_nozero" src="https://github.com/user-attachments/assets/9950e578-83fa-4879-9b0d-c1f056ee94e4" />
+<img width="1200" alt="fig01_omics_qc_nozero" src="https://github.com/user-attachments/assets/9950e578-83fa-4879-9b0d-c1f056ee94e4" />
 
 #### 3) 임상 및 외부데이터
 
