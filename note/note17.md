@@ -1,6 +1,6 @@
 # 07 모델과 학습
 
-### 07-1 모델 설계
+### 7-1 모델 설계
 
 연구 목적은 wsi를 받아서 29 signature를 예측하는 모델을 만드는데, 이때 attention head를 하나로 두고 29 signature를 예측하게 하지 말고 특정 방식으로 grouping하여 head를 할당하면 예측 성능과 attention 부위가 어떻게 바뀌는지를 확인하는 것이다.
 
@@ -24,7 +24,7 @@ feature extractor는 EXAONEPath를 사용해서 slide의 각 타일을 (768,) �
 
 위 구조를 가지고 모든 설계를 학습하였다 (8 design: g0, g2, g6, g7, g0+보조오믹스, g2+보조오믹스, g6+보조오믹스, g7+보조오믹스)
 
-### 07-2 학습 설계
+### 7-2 학습 설계
 
 학습 설정은 AdamW, cosine learning rate 사용하였고 g0에 대해 돌려 lr, wd를 측정했다. epoch은 최대 50 epoch에 early stopping 을 10으로 했다. (val 손실이 10 epoch 동안 나아지지 않으면 멈추고 best 모델을 씀)
 
