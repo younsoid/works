@@ -46,6 +46,12 @@
 
 6-11 grouping 별 보조 오믹스 채택
 
+### 7. 모델과 학습
+
+7-1. 모델 설계 [#](https://github.com/younsoid/works/blob/main/note/note17.md)
+
+7-2. 학습 설계 [#](https://github.com/younsoid/works/blob/main/note/note17.md)
+
 ### 8. Attention과 g7 grouping
 
 8-1. attention 확인 [#](https://github.com/younsoid/works/blob/main/note/note8.md)
