@@ -217,11 +217,9 @@ R7-3 같은 아형 안 표현형 간 오믹스 차이 (계획)
 
 1. A Pathway-Structured Privileged Distillation Framework for Deployable Computational Pathology [#](https://github.com/younsoid/works/blob/main/note/paper1.md)
 
-# ETC
+# 결과 정리
 
-### 연구 정리 (기존)
-
-#### 1. 데이터 준비
+### 1. 데이터 준비
 
 1-1. 코호트 구성 [#](https://github.com/younsoid/works/blob/main/note/note1.md) / update: [#](https://github.com/younsoid/works/blob/main/note/note12.md)
 
@@ -235,15 +233,15 @@ R7-3 같은 아형 안 표현형 간 오믹스 차이 (계획)
 
 1-6. 보조 오믹스별 정보량 [#](https://github.com/younsoid/works/blob/main/note/note2.md) / update: [#](https://github.com/younsoid/works/blob/main/note/note16.md)
 
-#### 2. H&E slide 처리
+### 2. H&E slide 처리
 
-#### 3. Slide tiling과 QC
+### 3. Slide tiling과 QC
 
-#### 4. Exaonepath feature extraction
+### 4. Exaonepath feature extraction
 
-#### 5. Hovernet 핵분할
+### 5. Hovernet 핵분할
 
-#### 6. Grouping과 보조오믹스
+### 6. Grouping과 보조오믹스
 
 6-1. grouping과 비교 설계 [#](https://github.com/younsoid/works/blob/main/note/note3.md)
 
@@ -267,7 +265,7 @@ R7-3 같은 아형 안 표현형 간 오믹스 차이 (계획)
 
 6-11 grouping 별 보조 오믹스 채택
 
-#### 7. 모델과 학습
+### 7. 모델과 학습
 
 7-1. 모델 설계 [#](https://github.com/younsoid/works/blob/main/note/note17.md) / update: [#](https://github.com/younsoid/works/blob/main/note/note18.md)
 
@@ -277,7 +275,7 @@ R7-3 같은 아형 안 표현형 간 오믹스 차이 (계획)
  
 7-4. 실행 [#](https://github.com/younsoid/works/blob/main/note/note19.md)
 
-#### 8. Attention과 g7 grouping
+### 8. Attention과 g7 grouping
 
 8-1. attention 확인 [#](https://github.com/younsoid/works/blob/main/note/note8.md)
 
@@ -287,7 +285,7 @@ R7-3 같은 아형 안 표현형 간 오믹스 차이 (계획)
 
 8-4. Attention similarity와 RNA coexpression [#](https://github.com/younsoid/works/blob/main/note/note10.md)
 
-#### 9. 성능 평가
+### 9. 성능 평가
 
 9-1. 성능 지표 [#](https://github.com/younsoid/works/blob/main/note/note21.md)
 
