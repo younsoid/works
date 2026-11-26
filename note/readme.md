@@ -52,6 +52,10 @@
 
 7-2. 학습 설계 [#](https://github.com/younsoid/works/blob/main/note/note17.md) / update: [#](https://github.com/younsoid/works/blob/main/note/note18.md)
 
+7-3 기준선: 슬라이드 평균 특징 + 릿지 [#](https://github.com/younsoid/works/blob/main/note/note19.md)
+ 
+7-4. 실행 [#](https://github.com/younsoid/works/blob/main/note/note19.md)
+
 ### 8. Attention과 g7 grouping
 
 8-1. attention 확인 [#](https://github.com/younsoid/works/blob/main/note/note8.md)
