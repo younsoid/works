@@ -68,15 +68,17 @@
 
 ### 9. 성능 평가
 
-9-1. 기본 성능 [#](https://github.com/younsoid/works/blob/main/note/note6.md)
+9-1. 성능 지표 [#](https://github.com/younsoid/works/blob/main/note/note21.md)
 
-9-2 grouping 이득 확인 (luad) [#](https://github.com/younsoid/works/blob/main/note/note6.md)
+9-2. 판정 [#](https://github.com/younsoid/works/blob/main/note/note21.md)
 
-9-3. grouping 이득 확인 (lusc) [#](https://github.com/younsoid/works/blob/main/note/note6.md)
+### cf
 
-cf) 연구 배경 [#](https://github.com/younsoid/works/blob/main/note/note11.md)
+cf) 9 - 기본 성능 [#](https://github.com/younsoid/works/blob/main/note/note6.md) / grouping 이득 확인 (luad) [#](https://github.com/younsoid/works/blob/main/note/note6.md) / grouping 이득 확인 (lusc) [#](https://github.com/younsoid/works/blob/main/note/note6.md)
 
-cf2) attention head 그룹화 [#](https://github.com/younsoid/works/blob/main/note/note15.md)
+cf2) 연구 배경 [#](https://github.com/younsoid/works/blob/main/note/note11.md)
+
+cf3) attention head 그룹화 [#](https://github.com/younsoid/works/blob/main/note/note15.md)
 #
 
 # 논문 리뷰
