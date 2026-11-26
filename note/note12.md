@@ -8,7 +8,7 @@ dx slide, rna가 모두 있으면서 do not use가 아닌 샘플은 905명(452/4
 
 변이는 444/440, miRNA는 446/440, methylation은 398/338, rppa는 331/289명에 존재한다. 
 
-<img width="300" alt="image" src="https://github.com/user-attachments/assets/ba776a03-1f1f-46ad-891d-10b561a8fff1" />
+<img width="200" alt="image" src="https://github.com/user-attachments/assets/ba776a03-1f1f-46ad-891d-10b561a8fff1" />
 
 #### 2) 오믹스 전처리
 
