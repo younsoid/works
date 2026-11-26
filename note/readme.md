@@ -48,9 +48,9 @@
 
 ### 7. 모델과 학습
 
-7-1. 모델 설계 [#](https://github.com/younsoid/works/blob/main/note/note17.md)
+7-1. 모델 설계 [#](https://github.com/younsoid/works/blob/main/note/note17.md) / update: [#](https://github.com/younsoid/works/blob/main/note/note18.md)
 
-7-2. 학습 설계 [#](https://github.com/younsoid/works/blob/main/note/note17.md)
+7-2. 학습 설계 [#](https://github.com/younsoid/works/blob/main/note/note17.md) / update: [#](https://github.com/younsoid/works/blob/main/note/note18.md)
 
 ### 8. Attention과 g7 grouping
 
