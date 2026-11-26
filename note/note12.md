@@ -27,7 +27,7 @@ methylation은 cg filtering을 해서 ch, rs를 제거하고, Zhou 연구의 450
 
 그리고 결측이 20% 이상인 경우를 filtering하고, 20% 미만인 경우 평균값으로 채웠다. 결과적으로 486,427중 400,772/397,085개가 남았다. (이 작업은 laud/lusc 따로 진행)
 
-<img width="800" alt="fig01_omics_qc_nozero" src="https://github.com/user-attachments/assets/9950e578-83fa-4879-9b0d-c1f056ee94e4" />
+<img width="1200" alt="fig01_omics_qc_nozero" src="https://github.com/user-attachments/assets/9950e578-83fa-4879-9b0d-c1f056ee94e4" />
 
 #### 3) 임상 및 외부데이터
 
@@ -37,7 +37,7 @@ GDC PanCanAtlas에서 TCGA-CDR의 임상 정보를 가져왔다. 나이, 성별,
 
 905명 중 나이, 성별, 인종, 병기, 조직형, 생존(OS/DSS/PFI), 흡연은 319-452/348-453, ABSOLUTE는 440/449, Thorsson 연구의 면역 table은 195–450/157–453명에서 존재했다. 
 
-<img width="1200" alt="fig01_clinical_coverage" src="https://github.com/user-attachments/assets/71342c19-6627-41af-b280-600dec26eb6a" />
+<img width="800" alt="fig01_clinical_coverage" src="https://github.com/user-attachments/assets/71342c19-6627-41af-b280-600dec26eb6a" />
 
 #### 4) 주요 유전자 변이와 비동의 변이 수
 
