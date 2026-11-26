@@ -293,7 +293,7 @@ R7-3 같은 아형 안 표현형 간 오믹스 차이 (계획)
 
 ### cf
 
-cf) 9 - 기본 성능 [#](https://github.com/younsoid/works/blob/main/note/note6.md) / grouping 이득 확인 (luad) [#](https://github.com/younsoid/works/blob/main/note/note6.md) / grouping 이득 확인 (lusc) [#](https://github.com/younsoid/works/blob/main/note/note6.md)
+cf) 모델 기본 성능 [#](https://github.com/younsoid/works/blob/main/note/note6.md) / grouping 이득 확인 (luad) [#](https://github.com/younsoid/works/blob/main/note/note6.md) / grouping 이득 확인 (lusc) [#](https://github.com/younsoid/works/blob/main/note/note6.md)
 
 cf2) 연구 배경 [#](https://github.com/younsoid/works/blob/main/note/note11.md)
 
