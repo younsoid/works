@@ -12,7 +12,8 @@
 1-3 MFP 아형(IE, IE/F, F, D)
 - 폐암을 뺀 23개 암종 7,031명 참조로 KNN(k = 35), 원 라벨과 일치 84.9%(κ 0.791)
 
-1-4 외부 검증 지표
+1-4 임상 및 외부 검증 지표
+- 임상: ??
 - ABSOLUTE 순도, Thorsson 2018(백혈구·기질 비율, TIL Regional Fraction), 면역 점수(ESTIMATE, MCP-counter)
 
 ### 2 슬라이드 처리
