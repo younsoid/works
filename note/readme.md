@@ -48,20 +48,13 @@
 
 6-1. Head design  [#](https://github.com/younsoid/works/blob/main/note/note3.md) / update: [#](https://github.com/younsoid/works/blob/main/note/note24.md)
 
-6-2. G2 확인
+6-2. G2 확인 [#](https://github.com/younsoid/works/blob/main/note/note22.md)
 
-6-3. G6 확인
+6-3. G6 확인 [#](https://github.com/younsoid/works/blob/main/note/note22.md)
 
-6-4. G7 확인
+6-4. G7 확인 [#](https://github.com/younsoid/works/blob/main/note/note22.md)
 
-
-
- 
-6-8. 보조 오믹스의 설명력
-
-6-10. 29 signature의 보조 오믹스 채택
-
-6-11 Head design별 보조 오믹스 채택
+6-5. Head design별 보조 오믹스 채택
 
 ### 7. 모델과 학습 설계
 
