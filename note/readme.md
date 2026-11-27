@@ -44,9 +44,9 @@
 
 ### 6. Head design과 보조오믹스
 
-6-0. Fold design
+6-0. Fold design [#](https://github.com/younsoid/works/blob/main/note/note24.md)
 
-6-1. Head design  [#](https://github.com/younsoid/works/blob/main/note/note3.md)
+6-1. Head design  [#](https://github.com/younsoid/works/blob/main/note/note3.md) / update: [#](https://github.com/younsoid/works/blob/main/note/note24.md)
 
 6-2. G2 확인
 
