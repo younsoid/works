@@ -44,19 +44,18 @@
 
 ### 6. Head design과 보조오믹스
 
-6-1. Head design과 비교 설계  [#](https://github.com/younsoid/works/blob/main/note/note3.md)
+6-0. Fold design
 
-6-2. G6 확인 [#](https://github.com/younsoid/works/blob/main/note/note3.md)
+6-1. Head design  [#](https://github.com/younsoid/works/blob/main/note/note3.md)
 
-6-3. G6 k=2와 G1 [#](https://github.com/younsoid/works/blob/main/note/note4.md)
+6-2. G2 확인
 
-6-4. G6 k=4 [#](https://github.com/younsoid/works/blob/main/note/note4.md)
+6-3. G6 확인
 
-6-5. G6 k=4 (2) [#](https://github.com/younsoid/works/blob/main/note/note5.md) (3) [#](https://github.com/younsoid/works/blob/main/note/note9.md)
+6-4. G7 확인
 
-6-6. 각 Head design의 결속 측정 [#](https://github.com/younsoid/works/blob/main/note/note5.md)
 
-6-7. G2 확인 [#](https://github.com/younsoid/works/blob/main/note/note5.md)
+
  
 6-8. 보조 오믹스의 설명력
 
@@ -190,3 +189,5 @@ cf) 모델 기본 성능 [#](https://github.com/younsoid/works/blob/main/note/no
 cf2) 연구 배경 [#](https://github.com/younsoid/works/blob/main/note/note11.md)
 
 cf3) attention head 그룹화 [#](https://github.com/younsoid/works/blob/main/note/note15.md)
+
+cf4) G6 확인 [#](https://github.com/younsoid/works/blob/main/note/note3.md) / G6 k=2와 G1 [#](https://github.com/younsoid/works/blob/main/note/note4.md) / G6 k=4 [#](https://github.com/younsoid/works/blob/main/note/note4.md) / G6 k=4 (2) [#](https://github.com/younsoid/works/blob/main/note/note5.md) (3) [#](https://github.com/younsoid/works/blob/main/note/note9.md) / 각 Head design의 결속 측정 [#](https://github.com/younsoid/works/blob/main/note/note5.md) / G2 확인 [#](https://github.com/younsoid/works/blob/main/note/note5.md)
